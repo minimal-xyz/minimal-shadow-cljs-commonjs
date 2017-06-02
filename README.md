@@ -21,7 +21,7 @@ null
 >
 ```
 
-Browse `[compiled/](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/)` to see the results.
+Browse [`compiled/`](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/) to see the results.
 
 ##### Advanced
 
