@@ -27,6 +27,8 @@ Watch and compiled
 yarn watch # shadow-cljs --dev
 ```
 
+Browse `[compiled/](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/)` to see the results.
+
 ### License
 
 MIT
