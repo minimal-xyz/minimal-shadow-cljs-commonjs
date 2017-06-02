@@ -21,13 +21,21 @@ null
 >
 ```
 
-Watch and compiled
+Browse `[compiled/](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/)` to see the results.
+
+##### Advanced
+
+Watch and compile:
 
 ```bash
 yarn watch # shadow-cljs --dev
 ```
 
-Browse `[compiled/](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/)` to see the results.
+Compiled with dead code eliminations:
+
+```basn
+yarn release # shadow-cljs --release
+```
 
 ### Steps
 
@@ -46,6 +54,23 @@ Here's a guide:
 ```
 
 * compile with commands
+
+##### For `release` mode
+
+Notice that in release, in order to build in `:advanced`, `shadow-cljs.edn` is required:
+
+```edn
+[{:id :release
+  :target :npm-module
+  :output-dir "compiled/"
+  :release {:entries [example.main]}}]
+```
+
+And to run with `release` configs:
+
+```bash
+shadow-cljs -b release --release
+```
 
 ### License
 

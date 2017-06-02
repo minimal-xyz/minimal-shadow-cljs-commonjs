@@ -11,6 +11,7 @@ goog.require('cljs.core');
 example.main.main = (function example$main$main(){
 return cljs.core.println.cljs$core$IFn$_invoke$arity$variadic(cljs.core.array_seq(["App loaded!"], 0));
 });
+goog.exportSymbol('example.main.main', example.main.main);
 
 module.exports = example.main;
 

@@ -1,5 +1,6 @@
 
 (ns example.main)
 
-(defn main []
+; ^:export to keep this function during dead code elimination
+(defn ^:export main []
   (println "App loaded!"))

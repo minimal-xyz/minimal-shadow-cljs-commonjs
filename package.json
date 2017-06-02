@@ -3,8 +3,10 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "compile": "shadow-cljs --once",
-    "watch": "shadow-cljs --dev"
+    "del": "rm -f compiled/*",
+    "compile": "yarn del && shadow-cljs --once",
+    "release": "yarn del && shadow-cljs -b release --release",
+    "watch": "yarn del && shadow-cljs --dev"
   },
   "author": "jiyinyiyong",
   "license": "MIT",
