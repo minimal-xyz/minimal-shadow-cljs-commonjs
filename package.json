@@ -4,9 +4,9 @@
   "main": "index.js",
   "scripts": {
     "del": "rm -f compiled/*",
-    "compile": "yarn del && shadow-cljs --once",
+    "compile": "yarn del && shadow-cljs -b release --once",
     "release": "yarn del && shadow-cljs -b release --release",
-    "watch": "yarn del && shadow-cljs --dev"
+    "watch": "yarn del && shadow-cljs -b release --dev"
   },
   "author": "jiyinyiyong",
   "license": "MIT",
@@ -14,13 +14,7 @@
     "ClojureScript"
   ],
   "description": "",
-  "shadow-cljs": {
-    "source-paths": [
-      "src/"
-    ],
-    "output-dir": "compiled/"
-  },
   "devDependencies": {
-    "shadow-cljs": "^0.8.0"
+    "shadow-cljs": "^0.9.4"
   }
 }
