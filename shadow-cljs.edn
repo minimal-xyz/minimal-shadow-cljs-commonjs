@@ -1,5 +1,6 @@
 
 {:source-paths ["src/"]
- :builds {:release {:target :npm-module
-                    :output-dir "compiled/"
-                    :release {:entries [example.main]}}}}
+ :builds {:app {:target :npm-module
+                :output-dir "target/"
+                :release {:entries [example.main]
+                          :output-dir "target/release/"}}}}

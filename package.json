@@ -3,10 +3,9 @@
   "version": "0.1.0",
   "main": "index.js",
   "scripts": {
-    "del": "rm -f compiled/*",
-    "compile": "yarn del && shadow-cljs -b release --once",
-    "release": "yarn del && shadow-cljs -b release --release",
-    "watch": "yarn del && shadow-cljs -b release --dev"
+    "compile": "shadow-cljs compile app",
+    "release": "shadow-cljs release app",
+    "watch": "shadow-cljs watch app"
   },
   "author": "jiyinyiyong",
   "license": "MIT",
@@ -15,6 +14,6 @@
   ],
   "description": "",
   "devDependencies": {
-    "shadow-cljs": "^0.9.4"
+    "shadow-cljs": "^0.12.0"
   }
 }

@@ -1,4 +1,2 @@
 
 yarn.lock -diff
-compiled/* -diff
-

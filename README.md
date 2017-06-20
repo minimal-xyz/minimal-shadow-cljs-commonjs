@@ -8,33 +8,36 @@ Compile ClojureScript into CommonJS JavaScript:
 
 ```bash
 yarn
-yarn compile # shadow-cljs -b release --once
+yarn compile
 ```
 
-Then you can check CommonJS result with Node.js :
+Browse `target/` folder to see the results. You can check CommonJS result with `node`:
 
 ```bash
 $ node
-> require('./compiled/example.main').main()
+> require('./target/example.main').main()
 App loaded!
 null
 >
 ```
-
-Browse [`compiled/`](https://github.com/minimal-xyz/minimal-shadow-cljs/tree/master/compiled/) to see the results.
 
 ##### Advanced
 
 Watch and compile:
 
 ```bash
-yarn watch # shadow-cljs -b release --dev
+yarn watch
 ```
 
 Compiled with dead code eliminations:
 
 ```basn
-yarn release # shadow-cljs -b release --release
+$ yarn release
+$ node
+> require('./target/release/example.main').main()
+App loaded!
+null
+>
 ```
 
 ### Steps
@@ -42,17 +45,20 @@ yarn release # shadow-cljs -b release --release
 To setup in a new project:
 
 * `yarn add --dev shadow-cljs`
-* add `shadow-cljs` configs in `package.json`
+* configure `shadow-cljs.edn`
 * compile with commands
 
 ##### For `release` mode
 
-Notice that in release, in order to build in `:advanced`, this is required:
+Notice that in release, in order to build in `:advanced`, `:entries` is required:
 
 ```edn
   {; ...
-   :release {:entries [example.main]}}
+   :release {:entries [example.main]
+             :output-dir "target/release/"}}
 ```
+
+And configs of `:release` will overwrite previous configs.
 
 ### License
 
