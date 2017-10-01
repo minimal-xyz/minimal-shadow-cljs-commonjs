@@ -26,13 +26,18 @@ null
 Watch and compile:
 
 ```bash
-yarn watch
+$ yarn shadow-cljs watch app
+$ node
+> require('./target/example.main').main()
+App loaded!
+null
+>
 ```
 
 Compiled with dead code eliminations:
 
 ```basn
-$ yarn release
+$ yarn shadow-cljs release app
 $ node
 > require('./target/release/example.main').main()
 App loaded!
